@@ -1,4 +1,3 @@
-
   
 def BuildVersion
 
@@ -20,7 +19,7 @@ def BuildVersion
             steps {
                 script {
                     deleteDir()
-                    checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/DevOpsINT/Course.git']]])def BuildVersion
+                    checkout([$class: 'GitSCM', branches: [[name: '*/rozana']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/DevOpsINT/Course.git']]])def BuildVersion
 
             			       		CurrentGitVersion = sh script:"git tag | sort -r | head -1", returnStdout: true
                         CurrentGitVersion = CurrentGitVersion.trim()
@@ -52,6 +51,42 @@ def BuildVersion
                 }
             }
         }
+
+           stage ('build') {
+            steps {
+                script {
+                        try {
+                            sh ''
+                            sh ''
+                            echo("..")
+                        } catch (err) {
+                            println("...")
+                            currentBuild.result = 'UNSTABLE'
+                        }
+                //  sh 'pwd'
+                //  sh 'ls'
+                    
+                }
+            }
+        }
+
+                  stage ('sanity_test') {
+            steps {
+                script {
+                        try {
+                            sh ''
+                            sh ''
+                            echo("..")
+                        } catch (err) {
+                            println("...")
+                            currentBuild.result = 'UNSTABLE'
+                        }
+                   //   sh 'pwd'
+                  //  sh 'ls'
+                    
+                }
+            }
+        }
         
-         }
+    }
 }
