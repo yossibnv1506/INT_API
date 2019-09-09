@@ -1,9 +1,8 @@
   
 def BuildVersion
-
  pipeline {
    options {
-      timeout(time: 30, unit: 'MINUTES')def BuildVersion
+      timeout(time: 30, unit: 'MINUTES')
 
    }
   environment {
@@ -18,74 +17,97 @@ def BuildVersion
         stage ('Checkout') {
             steps {
                 script {
-                    deleteDir()
-                    checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/DevOpsINT/Course.git']]])def BuildVersion
+                    withCredentials([usernamePassword(credentialsId: git_cred_id, passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
+                        dir(release_dir) {
+                            deleteDir()
+                            checkout([$class: 'GitSCM', branches: [[name: dev_branch]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: git_cred_id, url: "$scm_url/$GIT_USERNAME/$release_repo"]]])
 
-            			       		CurrentGitVersion = sh script:"git tag | sort -r | head -1", returnStdout: true
-                        CurrentGitVersion = CurrentGitVersion.trim()
-                        echo("CurrentGitVersion Is: ${CurrentGitVersion}")
-                        CurrentCommitIdShort = sh script:"git rev-parse HEAD | cut -c1-10", returnStdout: true
-                        echo("CurrentCommitIdShort Is: ${CurrentCommitIdShort}")
-                        BuildVersion = "${CurrentGitVersion}_${CurrentCommitIdShort}"
-                        BuildVersion = BuildVersion.trim()
-                        echo("BuildVersion Is: ${BuildVersion}")
+                        }
+                        dir(expiremnt_dir) {
+                            deleteDir()
+                            checkout([$class: 'GitSCM', branches: [[name: dev_branch]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: git_cred_id, url: "$scm_url/$GIT_USERNAME/$experiment_repo"]]])
+                            result = sh(script: 'git branch -r | grep -q 1.*', returnStatus: true)
+                            if (!result)
+                                Current_version = sh(script: "git branch -r | sed 's/[^0-9\\.]*//g' | sort -r | head -n 1", returnStdout: true).trim()
+                            else
+                                Current_version = initial_version
+                            Commit_Id = sh(script: "git rev-parse --short HEAD", returnStdout: true).trim()
+                            Build_version = Current_version + underscore + Commit_Id
+                            println("Checking the build version: $Build_version")
+                            last_digit_current_version = sh(script: "echo $Current_version | cut -d$dot -f3", returnStdout: true).trim()
+                            NextVersion = sh(script: "echo $Current_version | cut -d$dot -f1", returnStdout: true).trim() + dot + sh(script: "echo $Current_version |cut -d$dot -f2", returnStdout: true).trim() + dot + (Integer.parseInt(last_digit_current_version) + 1)
 
+
+                        }
+                    }
                 }
             }
         }
         stage ('Unit Test') {
             steps {
                 script {
-                    dir ('./testDevdir/') {
+                    sh "echo Checking the build version: $Build_version"
+                    dir("./$folder_scripts") {
                         try {
-                            sh ''
-                            sh ''
-                            echo("..")
-                        } catch (err) {
-                            println("...")
-                            currentBuild.result = 'UNSTABLE'
+                            sh "$module $test_script_name"
                         }
-                      sh 'pwd'
-                      sh 'ls'
+                        catch (exception) {
+                            println "The test is failed"
+                            currentBuild.result = pipeline_failure_indicator_string
+                            throw exception
+                        }
                     }
+
                 }
             }
         }
 
            stage ('build') {
-            steps {
-                script {
-                        try {
-                            sh ''
-                            sh ''
-                            echo("..")
-                        } catch (err) {
-                            println("...")
-                            currentBuild.result = 'UNSTABLE'
-                        }
-                //  sh 'pwd'
-                //  sh 'ls'
-                    
-                }
-            }
+               steps {
+                   script {
+                       archive_name = 'archive'
+                       sh "echo $workspace"
+                       dir(workspace) {
+                           stash includes: "$docker_file_name,**/$folder_scripts/*", name: archive_name
+                       }
+                       node(docker_slave_node) {
+                           try {
+                               unstash archive_name
+                               sh "docker build --build-arg script_name=$script_name --build-arg test_script_name=$test_script_name --build-arg folder_scripts=$folder_scripts --build-arg module=$module --build-arg image_name=$base_image_name . -t $image_name:$Build_version>/dev/null"
+                           }
+                           catch (exception) {
+                               println "The image build is failed"
+                               currentBuild.result = pipeline_failure_indicator_string
+                               throw exception
+                           }
+
+                       }
+                   }
+               }
         }
 
                   stage ('sanity_test') {
-            steps {
-                script {
-                        try {
-                            sh ''
-                            sh ''
-                            echo("..")
-                        } catch (err) {
-                            println("...")
-                            currentBuild.result = 'UNSTABLE'
-                        }
-                   //   sh 'pwd'
-                  //  sh 'ls'
-                    
-                }
-            }
+                      steps {
+                          script {
+                              remove_image_command = 'docker rmi -f $(sudo docker images | grep python | awk \'{print $3}\')'
+                              error_message_running_container = "The result of running container is incorrect"
+                              node(docker_slave_node) {
+                                  try {
+                                      result = sh(script: "docker run --rm --name $image_name $image_name:$Build_version", returnStdout: true).trim()
+                                      if (result != string_to_check) {
+                                          sh label: '', script: remove_image_command
+                                          currentBuild.result = pipeline_failure_indicator_string
+                                          throw new Exception(error_message_running_container)
+                                      }
+                                  }
+                                  catch (exception) {
+                                      sh label: '', script: remove_image_command
+                                      currentBuild.result = pipeline_failure_indicator_string
+                                      throw new Exception(error_message_running_container)
+                                  }
+                              }
+                          }
+                      }
         }
         
     }
