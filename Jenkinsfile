@@ -19,8 +19,6 @@ def mongo_image_to_check
                              checkout([$class: 'GitSCM', branches: [[name: prod]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: git_cred_id, url: release_repo]]])
                              path_json_file = sh(script: "pwd", returnStdout: true).trim() + path_seperator + prod + suffix_json
                              Current_version = Return_Json_From_File(path_json_file).Services.INT_API
-
-
                          }
                      }
 
