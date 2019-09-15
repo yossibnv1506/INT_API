@@ -25,7 +25,7 @@ agent { label 'master' }
   stage('Save to docker image to repo') {
    steps {
     script {
-     sh "mkdir -p ${storage}/dev
+     sh "mkdir -p ${storage}/dev"
      sh "docker save intapi:${Commit_Id} > ${storage}/dev/intapi_${Commit_Id}.tar"
     }
    }
