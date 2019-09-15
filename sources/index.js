@@ -13,9 +13,10 @@ index.use(bodyParser.json());
 index.use(bodyParser.urlencoded({ extended: true }));
 
 //Connect to DB using config file
-const PORT= process.env.PORT;
-const IP= process.env.IP;
-const connectionString= 'http://'+ IP +':'+PORT+'/app';
+const PORT= process.env.DB_PORT;
+const IP= process.env.DB_IP;
+// mongodb://127.0.0.1:27017/app
+const connectionString= 'mongodb://'+ IP +':'+PORT+'/app';
 mongoose.connect(config.database);
 
 //On connection event
@@ -34,8 +35,8 @@ const userMessage = require('./src/routes/userMessage');
 index.use('/postMessage', userMessage);
 
 // Start
-index.listen(process.env.PORT, () =>{
-        console.log(`Example app listening on port ${process.env.PORT}!`);
+index.listen(process.env.APP_PORT, () =>{
+        console.log(`Example app listening on port ${process.env.APP_PORT}!`);
 }
 );
 
