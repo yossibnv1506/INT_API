@@ -27,7 +27,8 @@ agent { label 'master' }
     script {
      sh "mkdir -p ${storage}/dev"
      sh "docker save intapi:${Commit_Id} > ${storage}/dev/intapi_${Commit_Id}.tar"
+     }
     }
    }
   }
- }
+}
