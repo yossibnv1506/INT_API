@@ -15,7 +15,7 @@ An easy way to get started with a Express server offering a REST API with Node.j
 
 ## Installation
 * `install npm package manager`
-* `git clone git@github.com:rwieruch/node-express-server-rest-api.git`
+* `git clone https://github.com/intclassproject/INT_API.git`
 * `cd api-server`
 * `npm install`
 * `start mongodb service (mongod)`
@@ -28,7 +28,7 @@ An easy way to get started with a Express server offering a REST API with Node.j
 #### CURL
 
 * Create a message with:
-  * `curl -X POST -H "Content-Type:application/json" http://localhost:3000/messages -d '{"text":"Hi again, World"}'`
+  * `curl -X POST -H "Content-Type:application/json" http://localhost:3000/postMessage -d '{"text":"Hi again, World"}'`
 
 #### Postman
 
