@@ -1,0 +1,477 @@
+  git branch yossi
+    2  sudo apt install git
+    3  git branch yossi
+    4  docker run -it centos:7 bash
+    5  suo apt install docker.io
+    6  sudo apt install docker.io
+    7  sudo -i
+    8  ls -lah
+    9  mkdir ELK-Stack
+   10  man mkdir -p
+   11  mkdir ansible
+   12  tree
+   13  sudo apt -y install tree
+   14  apt install tree
+   15  yes
+   16  sudo -i
+   17  ls -lah
+   18  cd /home/shoam/Course
+   19  cd appUT
+   20  ls
+   21  cat Yoskey.pem
+   22  t nodes and launch the agent services.
+   23  Below are the results when the master server is connected to all agent nodes.t nodes and launch the agent services.
+   24  Below are the results when the master server is connected to all agent nodes.
+   25  ls -lahj
+   26  ls -lah
+   27  java
+   28  sudo apt install default-jre        
+   29  java
+   30  install java
+   31  ls
+   32  cat Jenkinsfile
+   33  docker images
+   34  docker run -d -p 27017:27017 --name mongodb mongo:test or docker run -d -p 27017:27017 --name mongodb mongo
+   35  docker run -d -p 27017:27017 --name mongodb mongodb:mongo 
+   36  docker ps
+   37  curl -s -o /dev/null -w '%{http_code}' http://localhost:27017
+   38  curl -s -o /dev/null -w '%{http_code}' http://localhost:27013
+   39  curl -s -o /dev/null -w '%{http_code}' http://localhost:27015
+   40  curl -s -o /dev/null -w '%{http_code}' http://localhost:27017
+   41  mongod --httpinterface
+   42  docker ps
+   43  docker exec -it d6be44a2cc65
+   44  docker exec -it d6be44a2cc65 bash
+   45  ld
+   46  cd ..
+   47  ls
+   48  mkdir int_project
+   49  mv INT_DB int_project
+   50  ls
+   51  cd int_project
+   52  ls
+   53  git clone https://github.com/intclassproject/INT_API 
+   54  ls
+   55  git clone https://github.com/intclassproject/INT_API
+   56  ls
+   57  cd INT_
+   58  cd INT_API
+   59  ls
+   60  cat README.md 
+   61  ls
+   62  docker build . -t api:server
+   63  docker images
+   64  docker ps
+   65  docker run -p 3000:3000   api:server
+   66  docker ps
+   67  docker run -p 3000:3000   api:server
+   68  docker ps
+   69  docker run -p 3000:3000 api:server
+   70  l
+   71  sls  git branch yossi
+    2  sudo apt install git
+    3  git branch yossi
+    4  docker run -it centos:7 bash
+    5  suo apt install docker.io
+    6  sudo apt install docker.io
+    7  sudo -i
+    8  ls -lah
+    9  mkdir ELK-Stack
+   10  man mkdir -p
+   11  mkdir ansible
+   12  tree
+   13  sudo apt -y install tree
+   14  apt install tree
+   15  yes
+   16  sudo -i
+   17  ls -lah
+   18  cd /home/shoam/Course
+   19  cd appUT
+   20  ls
+   21  cat Yoskey.pem
+   22  t nodes and launch the agent services.
+   23  Below are the results when the master server is connected to all agent nodes.t nodes and launch the agent services.
+   24  Below are the results when the master server is connected to all agent nodes.
+   25  ls -lahj
+   26  ls -lah
+   27  java
+   28  sudo apt install default-jre        
+   29  java
+   30  install java
+   31  ls
+   32  cat Jenkinsfile
+   33  docker images
+   34  docker run -d -p 27017:27017 --name mongodb mongo:test or docker run -d -p 27017:27017 --name mongodb mongo
+   35  docker run -d -p 27017:27017 --name mongodb mongodb:mongo 
+   36  docker ps
+   37  curl -s -o /dev/null -w '%{http_code}' http://localhost:27017
+   38  curl -s -o /dev/null -w '%{http_code}' http://localhost:27013
+   39  curl -s -o /dev/null -w '%{http_code}' http://localhost:27015
+   40  curl -s -o /dev/null -w '%{http_code}' http://localhost:27017
+   41  mongod --httpinterface
+   42  docker ps
+   43  docker exec -it d6be44a2cc65
+   44  docker exec -it d6be44a2cc65 bash
+   45  ld
+   46  cd ..
+   47  ls
+   48  mkdir int_project
+   49  mv INT_DB int_project
+   50  ls
+   51  cd int_project
+   52  ls
+   53  git clone https://github.com/intclassproject/INT_API 
+   54  ls
+   55  git clone https://github.com/intclassproject/INT_API
+   56  ls
+   57  cd INT_
+   58  cd INT_API
+   59  ls
+   60  cat README.md 
+   61  ls
+   62  docker build . -t api:server
+   63  docker images
+   64  docker ps
+   65  docker run -p 3000:3000   api:server
+   66  docker ps
+   67  docker run -p 3000:3000   api:server
+   68  docker ps
+   69  docker run -p 3000:3000 api:server
+   70  l
+   71  sls
+   72  ls
+   73  cat Dockerfile 
+   74  ls
+   75  git status
+   76  cd sources/
+   77  ls
+   78  cd config/
+   79  ls
+   80  cd ..
+   81  ls  git branch yossi
+    2  sudo apt install git
+    3  git branch yossi
+    4  docker run -it centos:7 bash
+    5  suo apt install docker.io
+    6  sudo apt install docker.io
+    7  sudo -i
+    8  ls -lah
+    9  mkdir ELK-Stack
+   10  man mkdir -p
+   11  mkdir ansible
+   12  tree
+   13  sudo apt -y install tree
+   14  apt install tree
+   15  yes
+   16  sudo -i
+   17  ls -lah
+   18  cd /home/shoam/Course
+   19  cd appUT
+   20  ls
+   21  cat Yoskey.pem
+   22  t nodes and launch the agent services.
+   23  Below are the results when the master server is connected to all agent nodes.t nodes and launch the agent services.
+   24  Below are the results when the master server is connected to all agent nodes.
+   25  ls -lahj
+   26  ls -lah
+   27  java
+   28  sudo apt install default-jre        
+   29  java
+   30  install java
+   31  ls
+   32  cat Jenkinsfile
+   33  docker images
+   34  docker run -d -p 27017:27017 --name mongodb mongo:test or docker run -d -p 27017:27017 --name mongodb mongo
+   35  docker run -d -p 27017:27017 --name mongodb mongodb:mongo 
+   36  docker ps
+   37  curl -s -o /dev/null -w '%{http_code}' http://localhost:27017
+   38  curl -s -o /dev/null -w '%{http_code}' http://localhost:27013
+   39  curl -s -o /dev/null -w '%{http_code}' http://localhost:27015
+   40  curl -s -o /dev/null -w '%{http_code}' http://localhost:27017
+   41  mongod --httpinterface
+   42  docker ps
+   43  docker exec -it d6be44a2cc65
+   44  docker exec -it d6be44a2cc65 bash
+   45  ld
+   46  cd ..
+   47  ls
+   48  mkdir int_project
+   49  mv INT_DB int_project
+   50  ls
+   51  cd int_project
+   52  ls
+   53  git clone https://github.com/intclassproject/INT_API 
+   54  ls
+   55  git clone https://github.com/intclassproject/INT_API
+   56  ls
+   57  cd INT_
+   58  cd INT_API
+   59  ls
+   60  cat README.md 
+   61  ls
+   62  docker build . -t api:server
+   63  docker images
+   64  docker ps
+   65  docker run -p 3000:3000   api:server
+   66  docker ps
+   67  docker run -p 3000:3000   api:server
+   68  docker ps
+   69  docker run -p 3000:3000 api:server
+   70  l
+   71  sls
+   72  ls
+   73  cat Dockerfile 
+   74  ls
+   75  git status
+   76  cd sources/
+   77  ls
+   78  cd config/
+   79  ls
+   80  cd ..
+   81  ls
+   82  cat package
+   83  cat package.json 
+   84  ls
+   85  cat README.md 
+   86  ls
+   87  cd src/
+   88  ls
+   89  cd routes/
+   90  ls
+   91  cat userMessage.js 
+   92  vim userMessage.js 
+   93  cd ../..
+   94  cd
+   95  cd int_project/INT_API/
+   96  ls
+   97  docker run -p 3000:3000 api:server
+   98  cd sources/src/routes/
+   99  vim userMessage.js
+  100  cd
+  101  cd int_project/INT_API/
+  102  ls
+  103  docker run -p 3000:3000 api:server
+  104  cd
+  105  cat /home/shoam/.docker/config.json 
+  106  sudo cat /home/shoam/.docker/config.json 
+  107  ls -lah at /home/shoam/.docker/config.json 
+  108  ls -lah /home/shoam/.docker/config.json 
+  109  chmod 777 /home/shoam/.docker/config.json 
+  110  sudo chmod 777 /home/shoam/.docker/config.json 
+  111  ls -lah /home/shoam/.docker/config.json 
+  112  cd int_project/INT_API/
+  113  docker run -p 3000:3000 api:server
+  114  cd sources/src/routes/
+  115  ls
+  116  cat userMessage.js 
+  117  vim userMessage.js 
+  118  docker ps
+  119  netstat -tulpn
+  120  netstat -tulpn 
+  121  docker ps
+  122  docker logs mongodb 
+  123  docker run -p 3000:3000 api:server
+  124  ls
+  125  cd ..
+  126  ls
+  127  cd ..
+  128  ls
+  129  cat config/database.js 
+  130  ip add sh
+  131  sed -i 's/127.0.0.1/10.14.8.5/g' config/database.js 
+  132  cat config/database.js 
+  133  docker run -p 3000:3000 api:server
+  134  docker build . -t api:server
+  135  ls
+  136  cd src/routes/
+  137  ls
+  138  cd ../..
+  139  cd ..
+  140  ls
+  141  docker build . -t api:server
+  142  docker run -p 3000:3000 api:server
+  143  docker ps
+  144  docker run -d -p 3000:3000 api:server
+  145  docke rps
+  146  docker ps
+  147  curl localhost:3000
+  148  cat README.md 
+  149  curl -X POST -H "Content-Type:application/json" http://localhost:3000/postMessage -d '{"text":"Hi again, World"}'
+  150  docker ps
+  151  docker logs competent_snyder
+  152  curl -X POST -H "Content-Type:application/json" http://localhost:3000/postMessage -d '{"user":"1000", "text":"Hi again, World"}'
+  153  curl localhost:3000/postroutes
+  154  curl localhost:3000/postMoutes
+  155  curl localhost:3000/postMessage
+  156  curl -X POST localhost:3000/postMessage
+  157  curl -X GET localhost:3000/postMessage
+  158  history
+  159  history > History
+
+   82  cat package
+   83  cat package.json 
+   84  ls
+   85  cat README.md 
+   86  ls
+   87  cd src/
+   88  ls
+   89  cd routes/
+   90  ls
+   91  cat userMessage.js 
+   92  vim userMessage.js 
+   93  cd ../..
+   94  cd
+   95  cd int_project/INT_API/
+   96  ls
+   97  docker run -p 3000:3000 api:server
+   98  cd sources/src/routes/
+   99  vim userMessage.js
+  100  cd
+  101  cd int_project/INT_API/
+  102  ls
+  103  docker run -p 3000:3000 api:server
+  104  cd
+  105  cat /home/shoam/.docker/config.json 
+  106  sudo cat /home/shoam/.docker/config.json 
+  107  ls -lah at /home/shoam/.docker/config.json 
+  108  ls -lah /home/shoam/.docker/config.json 
+  109  chmod 777 /home/shoam/.docker/config.json 
+  110  sudo chmod 777 /home/shoam/.docker/config.json 
+  111  ls -lah /home/shoam/.docker/config.json 
+  112  cd int_project/INT_API/
+  113  docker run -p 3000:3000 api:server
+  114  cd sources/src/routes/
+  115  ls
+  116  cat userMessage.js 
+  117  vim userMessage.js 
+  118  docker ps
+  119  netstat -tulpn
+  120  netstat -tulpn 
+  121  docker ps
+  122  docker logs mongodb 
+  123  docker run -p 3000:3000 api:server
+  124  ls
+  125  cd ..
+  126  ls
+  127  cd ..
+  128  ls
+  129  cat config/database.js 
+  130  ip add sh
+  131  sed -i 's/127.0.0.1/10.14.8.5/g' config/database.js 
+  132  cat config/database.js 
+  133  docker run -p 3000:3000 api:server
+  134  docker build . -t api:server
+  135  ls
+  136  cd src/routes/
+  137  ls
+  138  cd ../..
+  139  cd ..
+  140  ls
+  141  docker build . -t api:server
+  142  docker run -p 3000:3000 api:server
+  143  docker ps
+  144  docker run -d -p 3000:3000 api:server
+  145  docke rps
+  146  docker ps
+  147  curl localhost:3000
+  148  cat README.md 
+  149  curl -X POST -H "Content-Type:application/json" http://localhost:3000/postMessage -d '{"text":"Hi again, World"}'
+  150  docker ps
+  151  docker logs competent_snyder
+  152  curl -X POST -H "Content-Type:application/json" http://localhost:3000/postMessage -d '{"user":"1000", "text":"Hi again, World"}'
+  153  curl localhost:3000/postroutes
+  154  curl localhost:3000/postMoutes
+  155  curl localhost:3000/postMessage
+  156  curl -X POST localhost:3000/postMessage
+  157  curl -X GET localhost:3000/postMessage
+  158  history
+  159  history > History
+
+   72  ls
+   73  cat Dockerfile 
+   74  ls
+   75  git status
+   76  cd sources/
+   77  ls
+   78  cd config/
+   79  ls
+   80  cd ..
+   81  ls
+   82  cat package
+   83  cat package.json 
+   84  ls
+   85  cat README.md 
+   86  ls
+   87  cd src/
+   88  ls
+   89  cd routes/
+   90  ls
+   91  cat userMessage.js 
+   92  vim userMessage.js 
+   93  cd ../..
+   94  cd
+   95  cd int_project/INT_API/
+   96  ls
+   97  docker run -p 3000:3000 api:server
+   98  cd sources/src/routes/
+   99  vim userMessage.js
+  100  cd
+  101  cd int_project/INT_API/
+  102  ls
+  103  docker run -p 3000:3000 api:server
+  104  cd
+  105  cat /home/shoam/.docker/config.json 
+  106  sudo cat /home/shoam/.docker/config.json 
+  107  ls -lah at /home/shoam/.docker/config.json 
+  108  ls -lah /home/shoam/.docker/config.json 
+  109  chmod 777 /home/shoam/.docker/config.json 
+  110  sudo chmod 777 /home/shoam/.docker/config.json 
+  111  ls -lah /home/shoam/.docker/config.json 
+  112  cd int_project/INT_API/
+  113  docker run -p 3000:3000 api:server
+  114  cd sources/src/routes/
+  115  ls
+  116  cat userMessage.js 
+  117  vim userMessage.js 
+  118  docker ps
+  119  netstat -tulpn
+  120  netstat -tulpn 
+  121  docker ps
+  122  docker logs mongodb 
+  123  docker run -p 3000:3000 api:server
+  124  ls
+  125  cd ..
+  126  ls
+  127  cd ..
+  128  ls
+  129  cat config/database.js 
+  130  ip add sh
+  131  sed -i 's/127.0.0.1/10.14.8.5/g' config/database.js 
+  132  cat config/database.js 
+  133  docker run -p 3000:3000 api:server
+  134  docker build . -t api:server
+  135  ls
+  136  cd src/routes/
+  137  ls
+  138  cd ../..
+  139  cd ..
+  140  ls
+  141  docker build . -t api:server
+  142  docker run -p 3000:3000 api:server
+  143  docker ps
+  144  docker run -d -p 3000:3000 api:server
+  145  docke rps
+  146  docker ps
+  147  curl localhost:3000
+  148  cat README.md 
+  149  curl -X POST -H "Content-Type:application/json" http://localhost:3000/postMessage -d '{"text":"Hi again, World"}'
+  150  docker ps
+  151  docker logs competent_snyder
+  152  curl -X POST -H "Content-Type:application/json" http://localhost:3000/postMessage -d '{"user":"1000", "text":"Hi again, World"}'
+  153  curl localhost:3000/postroutes
+  154  curl localhost:3000/postMoutes
+  155  curl localhost:3000/postMessage
+  156  curl -X POST localhost:3000/postMessage
+  157  curl -X GET localhost:3000/postMessage
+  158  history
+  159  history > History
